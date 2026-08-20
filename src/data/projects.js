@@ -1,25 +1,811 @@
-// ---------------------------------------------------------------------------
-// The actual project data lives in ./projects.json — edit that file (by hand,
-// or by regenerating it from a spreadsheet with scripts/xlsx_to_json.py, see
-// scripts/README.md).
-//
-// Fields:
-//   id          unique slug, lowercase-with-dashes (used as the React key)
-//   title       display name
-//   platform    short platform label, e.g. "iOS", "macOS (CLI)", "NES"
-//   tags        array of short category strings, used for the filter chips.
-//               Keep the vocabulary small so the filter row stays short.
-//   status      "released" | "wip" | "retired"
-//   description short text (2-4 sentences), or null to show a
-//               "description coming soon" placeholder on the card instead.
-//   image       filename of an image placed in /public/images/, or null to
-//               show a plain placeholder tile instead. Recommended size:
-//               roughly 900px wide, .webp format (keeps the site fast).
-//   links       array of { label, url }. Use url: null for a link that
-//               isn't ready yet — it will render as a disabled
-//               "coming soon" badge instead of a clickable link.
-// ---------------------------------------------------------------------------
-
-import PROJECTS_DATA from "./projects.json";
-
-export const PROJECTS = PROJECTS_DATA;
+[
+  {
+    "id": "talfiskene",
+    "title": "Talfiskene",
+    "platform": "iOS",
+    "tags": [
+      "Game"
+    ],
+    "status": "released",
+    "description": "A friendly number-recognition game for children just starting school: listen to and practice numbers 1–20, learn the tens, and train number pairs that add up to ten. Fully narrated, no time pressure. Danish only. Idea and design by Annemette Yde, voice by Maja.",
+    "image": "talfiskene.webp",
+    "links": [
+      {
+        "label": "App Store (Danish store)",
+        "url": "https://apps.apple.com/dk/app/talfiskene/id1490086931?l=da"
+      }
+    ]
+  },
+  {
+    "id": "regnesafari",
+    "title": "Regnesafari",
+    "platform": "iOS",
+    "tags": [
+      "Game"
+    ],
+    "status": "released",
+    "description": "A math game for the first years of primary school, practicing addition with sums both under and over ten — narrated instructions, no time pressure, and a reward system. Danish only. Design by Annemette Yde, music by Partners in Rhyme.",
+    "image": "regnesafari.webp",
+    "links": [
+      {
+        "label": "App Store",
+        "url": "https://apps.apple.com/dk/app/regnesafari/id1511336210"
+      }
+    ]
+  },
+  {
+    "id": "one-two-match",
+    "title": "1..2..Match",
+    "platform": "tvOS",
+    "tags": [
+      "Game"
+    ],
+    "status": "released",
+    "description": "A simple, inclusive matching-card game for Apple TV — play alone or with up to 4 people sharing one Apple Remote. Ships with 4 card decks and 4 layouts.",
+    "image": "match12.webp",
+    "links": [
+      {
+        "label": "App Store",
+        "url": "https://apps.apple.com/us/app/1-2-match/id1511334521"
+      }
+    ]
+  },
+  {
+    "id": "battle-emojis",
+    "title": "Battle Emojis",
+    "platform": "iOS (multiplayer)",
+    "tags": [
+      "Game"
+    ],
+    "status": "wip",
+    "description": "A stripped-down take on Brawl Stars — short, skill-based emoji matches with none of the skins or boosts. Development is currently paused.",
+    "image": "battle-emojis.webp",
+    "links": [
+      {
+        "label": "Link coming soon",
+        "url": null
+      }
+    ]
+  },
+  {
+    "id": "hipstercade-c64",
+    "title": "Hipstercade (C64)",
+    "platform": "Commodore 64",
+    "tags": [
+      "Game"
+    ],
+    "status": "released",
+    "description": "The Commodore 64 edition of Hipstercade — a game about patience, hipster irony and the meaningless cycles of modern life. Sound and music by Mikkel Lodahl.",
+    "image": "hipstercade64.webp",
+    "links": [
+      {
+        "label": "itch.io",
+        "url": "https://aladinsane-dk.itch.io/hipstercade"
+      }
+    ]
+  },
+  {
+    "id": "hipstercade-ios",
+    "title": "Hipstercade (iOS)",
+    "platform": "iOS",
+    "tags": [
+      "Game"
+    ],
+    "status": "wip",
+    "description": "The original iOS release of Hipstercade — pulled from the App Store after falling out of date. A remade version has been resubmitted and is awaiting approval. Graphics inspired by Wil Wheaton, sound and music by Mikkel Lodahl.",
+    "image": "hipstercade_ios.webp",
+    "links": [
+      {
+        "label": "App Store link coming soon",
+        "url": null
+      }
+    ]
+  },
+  {
+    "id": "patterns",
+    "title": "Patterns!",
+    "platform": "iOS (planned)",
+    "tags": [
+      "Game"
+    ],
+    "status": "wip",
+    "description": "A solo pattern-matching card game, currently being finished up before release. Its public name is still to be decided — the internal codename \"Sets\" can't be used for trademark reasons.",
+    "image": "patterns.webp",
+    "links": [
+      {
+        "label": "Link coming soon",
+        "url": null
+      }
+    ]
+  },
+  {
+    "id": "tennis42",
+    "title": "Tennis42 (Tennis for Two)",
+    "platform": "NES",
+    "tags": [
+      "Game"
+    ],
+    "status": "released",
+    "description": "A remake of Tennis for Two — arguably the first video game ever made, originally built for an oscilloscope in 1958 — for the Nintendo Entertainment System. Two-player only. Written in 6502 assembly, compiled with nesasm; music by Cutcreator in FamiStudio. The ROM can also be burned to an EPROM for real NES hardware.",
+    "image": "tennis42.webp",
+    "links": [
+      {
+        "label": "itch.io",
+        "url": "https://aladinsane-dk.itch.io/tennis-for-2"
+      }
+    ]
+  },
+  {
+    "id": "escape-from-cthulhu",
+    "title": "Escape from Cthulhu",
+    "platform": "Fairchild Channel F",
+    "tags": [
+      "Game"
+    ],
+    "status": "released",
+    "description": "A tiny hero versus a floating cosmic horror, rendered in the Fairchild Channel F's four (very cheerful) colors.",
+    "image": "cthulu.webp",
+    "links": [
+      {
+        "label": "itch.io",
+        "url": "https://aladinsane-dk.itch.io/escape-from-cthulhu"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/cthulu_f8"
+      }
+    ]
+  },
+  {
+    "id": "attack-of-the-empire",
+    "title": "Attack of the Empire",
+    "platform": "MS-DOS",
+    "tags": [
+      "Game"
+    ],
+    "status": "released",
+    "description": "\"Pew pew\" for MS-DOS — a straightforward retro shooter.",
+    "image": "attack-of-the-empire.webp",
+    "links": [
+      {
+        "label": "itch.io",
+        "url": "https://aladinsane-dk.itch.io/attack-of-the-empire"
+      }
+    ]
+  },
+  {
+    "id": "exploding-barrels",
+    "title": "Exploding Barrels",
+    "platform": "ZX81",
+    "tags": [
+      "Game"
+    ],
+    "status": "released",
+    "description": "A tiny action game for the good old ZX81.",
+    "image": "exploding-barrels.webp",
+    "links": [
+      {
+        "label": "itch.io",
+        "url": "https://aladinsane-dk.itch.io/exploding-barrels"
+      }
+    ]
+  },
+  {
+    "id": "memory",
+    "title": "Memory",
+    "platform": "Web (browser)",
+    "tags": [
+      "Game"
+    ],
+    "status": "released",
+    "description": "A little match-2 memory game to keep your brain sharp — playable straight in the browser.",
+    "image": "memory.webp",
+    "links": [
+      {
+        "label": "Play on itch.io",
+        "url": "https://aladinsane-dk.itch.io/memory"
+      }
+    ]
+  },
+  {
+    "id": "arcade-pi",
+    "title": "Arcade Pi",
+    "platform": "Raspberry Pi",
+    "tags": [
+      "Game"
+    ],
+    "status": "released",
+    "description": "Five classic arcade games for Raspberry Pi, built on the Circle bare-metal framework.",
+    "image": "arcade-pi.webp",
+    "links": [
+      {
+        "label": "itch.io",
+        "url": "https://aladinsane-dk.itch.io/arcade-pi"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/circle-arcade"
+      }
+    ]
+  },
+  {
+    "id": "beadmaster-pro",
+    "title": "Beadmaster Pro",
+    "platform": "iOS / iPadOS",
+    "tags": [
+      "Tool"
+    ],
+    "status": "released",
+    "description": "Turns any photo into a pixel-perfect template for bead crafts, cross stitch, LEGO mosaics or Minecraft builds. Pinch-crop your image, dither it with Floyd–Steinberg, and export a list of exactly which beads you need. Palettes for Hama, Artkal, Nabbi, Perler, LEGO, C64, DMC yarn, ZX Spectrum, Apple II and more.",
+    "image": "beadmaster-pro.webp",
+    "links": [
+      {
+        "label": "App Store",
+        "url": "https://apps.apple.com/us/app/bead-master-pro/id1515294794"
+      }
+    ]
+  },
+  {
+    "id": "fronter-uploader",
+    "title": "Fronter Uploader Tool",
+    "platform": "iOS",
+    "tags": [
+      "Tool"
+    ],
+    "status": "retired",
+    "description": "A third-party helper for uploading documents to Fronter (a school/LMS platform) from any app. Retired after iOS 10 added a built-in Files app that made it mostly redundant.",
+    "image": "fronter-uploader.webp",
+    "links": [
+      {
+        "label": "App Store (archived)",
+        "url": "https://apps.apple.com/us/app/uploader-for-fronter/id735210056"
+      }
+    ]
+  },
+  {
+    "id": "pixel-designer",
+    "title": "Pixel Designer",
+    "platform": "iOS / iPadOS",
+    "tags": [
+      "Tool"
+    ],
+    "status": "released",
+    "description": "A no-nonsense pixel art editor: pencil, brush, bucket and color picker, nothing more. Exports pixel-accurate PNGs or editable Lossless Matrix Images (LMI) — the same format used by Beadmaster and Led Picture Frame.",
+    "image": "pixel-designer.webp",
+    "links": [
+      {
+        "label": "App Store",
+        "url": "https://apps.apple.com/dk/app/pixel-designer/id1546483994"
+      }
+    ]
+  },
+  {
+    "id": "image-hunter",
+    "title": "Image Hunter",
+    "platform": "iOS / macOS",
+    "tags": [
+      "Tool"
+    ],
+    "status": "wip",
+    "description": "Source-available only — not distributed on the App Store. Build it yourself from the GitHub repo, which is currently being tidied up.",
+    "image": null,
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/ImageHunter"
+      }
+    ]
+  },
+  {
+    "id": "ardent-reader",
+    "title": "The Ardent Reader",
+    "platform": "iOS / iPadOS",
+    "tags": [
+      "Tool"
+    ],
+    "status": "released",
+    "description": "A companion for keeping track of the books you read — when, where, and what you thought of them. Scan a barcode or enter an ISBN via the Google Books API, mark books as read or want-to-read, and browse a map of where you've read them.",
+    "image": "ardent-reader.webp",
+    "links": [
+      {
+        "label": "App Store",
+        "url": "https://apps.apple.com/dk/app/the-ardent-reader/id1612248482"
+      }
+    ]
+  },
+  {
+    "id": "led-picture-frame",
+    "title": "Led Picture Frame",
+    "platform": "iOS",
+    "tags": [
+      "Tool"
+    ],
+    "status": "released",
+    "description": "The iOS app that drives a DIY LED picture frame. The companion hardware and firmware live in a separate GitHub repo.",
+    "image": "led-picture-frame.webp",
+    "links": [
+      {
+        "label": "App Store",
+        "url": "https://apps.apple.com/us/app/led-picture-frame/id1545741632"
+      },
+      {
+        "label": "Hardware (GitHub)",
+        "url": "https://github.com/general-ackbar/LedPictureFrame"
+      }
+    ]
+  },
+  {
+    "id": "stack-player",
+    "title": "Stack Player",
+    "platform": "macOS",
+    "tags": [
+      "Tool"
+    ],
+    "status": "released",
+    "description": "A frame-by-frame animation player for macOS: load a folder of images and play them back at any frame rate, step through frame by frame, extract frames from video, or build a video from stills. Supports common bitmap formats plus the LMI and legacy PAK matrix-image formats.",
+    "image": "stack-player.webp",
+    "links": [
+      {
+        "label": "App Store",
+        "url": "https://apps.apple.com/dk/app/stack-player/id1633217371?mt=12"
+      }
+    ]
+  },
+  {
+    "id": "lmiviewer",
+    "title": "LmiViewer",
+    "platform": "macOS",
+    "tags": [
+      "Tool"
+    ],
+    "status": "released",
+    "description": "A viewer for LMI, EVA and PAK images and animations — homemade, uncompressed binary image formats designed to be easy to decode on low-spec microcontrollers (ESP8266/32, Arduino, Teensy) and small displays or LED matrices.",
+    "image": "lmiviewer.webp",
+    "links": [
+      {
+        "label": "App Store",
+        "url": "https://apps.apple.com/dk/app/lmiviewer/id1633126556?mt=12"
+      }
+    ]
+  },
+  {
+    "id": "asciimator",
+    "title": "AsciiMator",
+    "platform": "macOS",
+    "tags": [
+      "Tool"
+    ],
+    "status": "released",
+    "description": "Turns still images and videos into monochrome ASCII art, with a range of palettes and pro options — single-character output, dithering, outline tracing, and custom character sets.",
+    "image": "asciimator.webp",
+    "links": [
+      {
+        "label": "App Store",
+        "url": "https://apps.apple.com/dk/app/asciimator/id1632596251?mt=12"
+      }
+    ]
+  },
+  {
+    "id": "chreditor",
+    "title": "CHREditor",
+    "platform": "macOS",
+    "tags": [
+      "Tool"
+    ],
+    "status": "wip",
+    "description": "An editor for Nintendo Entertainment System CHR-ROMs, built because no modern-Mac-friendly editor existed. Create and edit ROMs, import/export palettes, edit tiles, and import images directly into tile form. Finished — release is pending.",
+    "image": "chreditor.webp",
+    "links": [
+      {
+        "label": "Link coming soon",
+        "url": null
+      }
+    ]
+  },
+  {
+    "id": "nesgfx",
+    "title": "NESGfx",
+    "platform": "macOS",
+    "tags": [
+      "Tool"
+    ],
+    "status": "wip",
+    "description": "A companion tool to CHREditor for building NES page tables, attribute tables and palettes, developed while making Tennis42. Exports a complete set as binary files ready to include directly in 6502 source. Finished — release is pending.",
+    "image": "nesgfx.webp",
+    "links": [
+      {
+        "label": "Link coming soon",
+        "url": null
+      }
+    ]
+  },
+  {
+    "id": "img2svg",
+    "title": "img2svg",
+    "platform": "macOS",
+    "tags": [
+      "CLI",
+      "Tool"
+    ],
+    "status": "released",
+    "description": "Converts bitmaps into halftone vector art — circles, squares, spirals or lines — mainly for laser cutters, pen plotters and CNC mills.",
+    "image": "img2svg.webp",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/img2svg"
+      }
+    ]
+  },
+  {
+    "id": "gcodetool",
+    "title": "gcodetool (gcodescale)",
+    "platform": "macOS",
+    "tags": [
+      "CLI",
+      "Tool"
+    ],
+    "status": "released",
+    "description": "A small command-line tool for scaling and translating existing G-code files.",
+    "image": "gcodetool.webp",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/gcodetool"
+      }
+    ]
+  },
+  {
+    "id": "c64-optimizer",
+    "title": "C64 Optimizer",
+    "platform": "macOS",
+    "tags": [
+      "CLI",
+      "Tool"
+    ],
+    "status": "released",
+    "description": "Prepares bitmap images for Commodore 64 hardware — limits each character block to the C64's color rules, plus resizing, cropping, palette optimization and dithering. Output is ready for further conversion with tools like png2prg.",
+    "image": "c64optimizer.webp",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/c64optimizer"
+      }
+    ]
+  },
+  {
+    "id": "img2lmi",
+    "title": "img2lmi",
+    "platform": "Cross-platform",
+    "tags": [
+      "CLI",
+      "Tool"
+    ],
+    "status": "released",
+    "description": "Encodes bitmap images into the Lossless Matrix Image (.lmi) format — a cross-platform successor to lmiencoder.",
+    "image": "img2lmi.webp",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/img2lmi"
+      }
+    ]
+  },
+  {
+    "id": "img2esc",
+    "title": "Thermal printer utility",
+    "platform": "macOS",
+    "tags": [
+      "CLI",
+      "Tool"
+    ],
+    "status": "released",
+    "description": "Prepares images for printing on thermal receipt printers using the CUPS printer system.",
+    "image": "img2esc.webp",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/img2esc"
+      }
+    ]
+  },
+  {
+    "id": "vid2eva",
+    "title": "vid2eva",
+    "platform": "macOS",
+    "tags": [
+      "CLI",
+      "Tool"
+    ],
+    "status": "released",
+    "description": "Converts video files to EVA — an old, quirky DOS-era animation format.",
+    "image": "vid2eva.webp",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/vid2eva"
+      }
+    ]
+  },
+  {
+    "id": "fbplayer",
+    "title": "fbplayer",
+    "platform": "Linux",
+    "tags": [
+      "CLI",
+      "Tool"
+    ],
+    "status": "released",
+    "description": "A Linux framebuffer player for LMI and EVA animations.",
+    "image": "fbplayer.webp",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/fbplayer"
+      }
+    ]
+  },
+  {
+    "id": "chr2img",
+    "title": "chr2img",
+    "platform": "App (details pending)",
+    "tags": [
+      "Tool"
+    ],
+    "status": "wip",
+    "description": null,
+    "image": "chr2img.webp",
+    "links": [
+      {
+        "label": "App Store link coming soon",
+        "url": null
+      }
+    ]
+  },
+  {
+    "id": "img2nes",
+    "title": "img2nes",
+    "platform": "App (details pending)",
+    "tags": [
+      "Tool"
+    ],
+    "status": "wip",
+    "description": null,
+    "image": "img2nes.webp",
+    "links": [
+      {
+        "label": "App Store link coming soon",
+        "url": null
+      }
+    ]
+  },
+  {
+    "id": "rom2msx",
+    "title": "rom2msx",
+    "platform": "Cross-platform",
+    "tags": [
+      "CLI",
+      "Tool"
+    ],
+    "status": "released",
+    "description": "Converts MSX ROM images from the command line.",
+    "image": "rom2msx.webp",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/rom2msx"
+      }
+    ]
+  },
+  {
+    "id": "hx20utils",
+    "title": "Epson HX20 utilities",
+    "platform": "Cross-platform",
+    "tags": [
+      "CLI",
+      "Tool"
+    ],
+    "status": "released",
+    "description": "A small suite to convert Epson HX-20 BASIC programs to WAV files for loading via the cassette interface; tokenize BAS programs and create images.",
+    "image": "hx20utils.webp",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/hx20utils"
+      }
+    ]
+  },
+  {
+    "id": "bmp2yjk",
+    "title": "bmp2yjk",
+    "platform": "Cross-platform",
+    "tags": [
+      "CLI",
+      "Tool"
+    ],
+    "status": "released",
+    "description": "A port of an old DOS/Windows tool for converting BMP images into the MSX YJK color format.",
+    "image": "bmp2yjk.webp",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/bmp2yjk"
+      }
+    ]
+  },
+  {
+    "id": "zx81-eprom-builder",
+    "title": "ZX81 External EPROM Builder",
+    "platform": "Cross-platform",
+    "tags": [
+      "CLI",
+      "Tool"
+    ],
+    "status": "released",
+    "description": "Builds custom, bootable ZX81 ROM images with built-in games or programs — for burning to an external EPROM.",
+    "image": "p2rom.webp",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/ZX81-external-eprom-builder"
+      }
+    ]
+  },
+  {
+    "id": "mosaic-creator",
+    "title": "Mosaic Creator",
+    "platform": "Mono / Cross-platform",
+    "tags": [
+      "Tool",
+      "CLI"
+    ],
+    "status": "wip",
+    "description": "The engine behind the Mosaics project below — builds photo mosaics out of smaller source images. Source not published yet.",
+    "image": "mosaic-creator.webp",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/mosaiccreator"
+      }
+    ]
+  },
+  {
+    "id": "mindwave-monitor",
+    "title": "MindWave Monitor",
+    "platform": "macOS",
+    "tags": [
+      "Tool"
+    ],
+    "status": "wip",
+    "description": "A monitor for NeuroSky's MindWave EEG headset, built on since-outdated SDKs. Kept here for the novelty value as much as anything.",
+    "image": null,
+    "links": [
+      {
+        "label": "GitHub link coming soon",
+        "url": null
+      }
+    ]
+  },
+  {
+    "id": "eye-tracker",
+    "title": "Eye Tracker (The Eye Tribe)",
+    "platform": "macOS",
+    "tags": [
+      "Tool"
+    ],
+    "status": "wip",
+    "description": "A tool for the Eye Tribe eye tracker — a piece of hardware whose maker shut down around 2016–2017, so this is very much a museum piece by now.",
+    "image": null,
+    "links": [
+      {
+        "label": "GitHub link coming soon",
+        "url": null
+      }
+    ]
+  },
+  {
+    "id": "mondrian-puzzles",
+    "title": "Mondrian Puzzles",
+    "platform": "Web / Ethereum",
+    "tags": [
+      "NFT"
+    ],
+    "status": "released",
+    "description": "An NFT project generating Mondrian-style puzzle art on-chain — every calculation, all metadata and the artwork itself live entirely on Ethereum. Mint for 0.01 ETH, hard-capped at 5,120 puzzles, with a free annual mint.",
+    "image": "mondrian.webp",
+    "links": [
+      {
+        "label": "mondrian-puzzles.net",
+        "url": "https://www.mondrian-puzzles.net"
+      }
+    ]
+  },
+  {
+    "id": "mosaics",
+    "title": "Mosaics",
+    "platform": "Web",
+    "tags": [
+      "Other"
+    ],
+    "status": "released",
+    "description": "A playful website that builds a portrait of a non-existent person out of a thousand smaller portraits of other non-existent people, sourced from thispersondoesnotexist.com. Built on the Mosaic Creator engine above.",
+    "image": "mosaics.webp",
+    "links": [
+      {
+        "label": "mosaic.codeninja.dk",
+        "url": "http://mosaic.codeninja.dk"
+      }
+    ]
+  },
+  {
+    "id": "pirate-insults",
+    "title": "Pirate Insults",
+    "platform": "Web / Ethereum",
+    "tags": [
+      "Game",
+      "NFT"
+    ],
+    "status": "released",
+    "description": "A tribute to the sword-fighting insult duels from The Secret of Monkey Island, reimagined as an NFT mini-game. Build a worthy insult, then mint a Certified Pirate Insult Emblem — only 32 exist. Playing just needs a wallet; minting has a price. Original graphics by Jonatan, inspired by screenshots from the original game.",
+    "image": "pirate-insults.webp",
+    "links": [
+      {
+        "label": "pirate-insults.net",
+        "url": "https://www.pirate-insults.net"
+      }
+    ]
+  },
+  {
+    "id": "img2charset",
+    "title": "img2charset",
+    "platform": "macOS",
+    "tags": [
+      "CLI",
+      "Tool"
+    ],
+    "status": "released",
+    "description": "A small utility to convert a spritesheet or picture to a charset for NES",
+    "image": "img2charset.webp",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/img2charset"
+      }
+    ]
+  },
+  {
+    "id": "ebookmaker",
+    "title": "Ebook photo book maker",
+    "platform": "macOS",
+    "tags": [
+      "CLI",
+      "Tool"
+    ],
+    "status": "released",
+    "description": "Utility to create visual ebooks from image folders.",
+    "image": null,
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/ebookmaker"
+      }
+    ]
+  },
+  {
+    "id": "peripagea6",
+    "title": "MacOS Printer",
+    "platform": "macOS",
+    "tags": [
+      "Tool"
+    ],
+    "status": "released",
+    "description": "An app to print images and text fra a Mac to a PeriPage A6 bluetooth printer",
+    "image": "peripage.webp",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/PeriPageA6-macos"
+      }
+    ]
+  }
+]
