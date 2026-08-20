@@ -422,7 +422,7 @@
   {
     "id": "img2svg",
     "title": "img2svg",
-    "platform": "macOS (CLI)",
+    "platform": "macOS",
     "tags": [
       "CLI",
       "Tool"
@@ -432,15 +432,15 @@
     "image": "img2svg.webp",
     "links": [
       {
-        "label": "GitHub release coming soon",
-        "url": null
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/img2svg"
       }
     ]
   },
   {
     "id": "gcodetool",
     "title": "gcodetool (gcodescale)",
-    "platform": "macOS (CLI)",
+    "platform": "macOS",
     "tags": [
       "CLI",
       "Tool"
@@ -450,15 +450,15 @@
     "image": "gcodetool.webp",
     "links": [
       {
-        "label": "GitHub release coming soon",
-        "url": null
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/gcodetool"
       }
     ]
   },
   {
     "id": "c64-optimizer",
     "title": "C64 Optimizer",
-    "platform": "macOS (CLI)",
+    "platform": "macOS",
     "tags": [
       "CLI",
       "Tool"
@@ -476,7 +476,7 @@
   {
     "id": "img2lmi",
     "title": "img2lmi",
-    "platform": "CLI (cross-platform)",
+    "platform": "Cross-platform",
     "tags": [
       "CLI",
       "Tool"
@@ -493,26 +493,26 @@
   },
   {
     "id": "img2esc",
-    "title": "img2esc",
-    "platform": "CLI",
+    "title": "Thermal printer utility",
+    "platform": "macOS",
     "tags": [
       "CLI",
       "Tool"
     ],
     "status": "released",
-    "description": "Prepares images for printing on thermal receipt printers such as the PeriPage. Published on GitHub — a proper description and screenshots are still on the way.",
+    "description": "Prepares images for printing on thermal receipt printers using the CUPS printer system.",
     "image": "img2esc.webp",
     "links": [
       {
-        "label": "GitHub link coming soon",
-        "url": null
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/img2esc"
       }
     ]
   },
   {
     "id": "vid2eva",
     "title": "vid2eva",
-    "platform": "CLI (C++)",
+    "platform": "macOS",
     "tags": [
       "CLI",
       "Tool"
@@ -582,7 +582,7 @@
   {
     "id": "rom2msx",
     "title": "rom2msx",
-    "platform": "CLI (C++)",
+    "platform": "Cross-platform",
     "tags": [
       "CLI",
       "Tool"
@@ -599,14 +599,14 @@
   },
   {
     "id": "hx20utils",
-    "title": "hx20utils",
-    "platform": "CLI (C++)",
+    "title": "Epson HX20 utilities",
+    "platform": "Cross-platform",
     "tags": [
       "CLI",
       "Tool"
     ],
     "status": "released",
-    "description": "Converts Epson HX-20 BASIC programs to WAV files for loading via the cassette interface.",
+    "description": "A small suite to convert Epson HX-20 BASIC programs to WAV files for loading via the cassette interface; tokenize BAS programs and create images.",
     "image": "hx20utils.webp",
     "links": [
       {
@@ -618,7 +618,7 @@
   {
     "id": "bmp2yjk",
     "title": "bmp2yjk",
-    "platform": "CLI (C++)",
+    "platform": "Cross-platform",
     "tags": [
       "CLI",
       "Tool"
@@ -636,7 +636,7 @@
   {
     "id": "zx81-eprom-builder",
     "title": "ZX81 External EPROM Builder",
-    "platform": "ZX81",
+    "platform": "Cross-platform",
     "tags": [
       "CLI",
       "Tool"
@@ -654,7 +654,7 @@
   {
     "id": "mosaic-creator",
     "title": "Mosaic Creator",
-    "platform": "macOS",
+    "platform": "Mono / Cross-platform",
     "tags": [
       "Tool",
       "CLI"
@@ -664,8 +664,8 @@
     "image": "mosaic-creator.webp",
     "links": [
       {
-        "label": "GitHub link coming soon",
-        "url": null
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/mosaiccreator"
       }
     ]
   },
@@ -752,6 +752,59 @@
       {
         "label": "pirate-insults.net",
         "url": "https://www.pirate-insults.net"
+      }
+    ]
+  },
+  {
+    "id": "img2charset",
+    "title": "img2charset",
+    "platform": "macOS",
+    "tags": [
+      "CLI",
+      "Tool"
+    ],
+    "status": "released",
+    "description": "A small utility to convert a spritesheet or picture to a charset for NES",
+    "image": "img2charset.webp",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/img2charset"
+      }
+    ]
+  },
+  {
+    "id": "ebookmaker",
+    "title": "Ebook photo book maker",
+    "platform": "macOS",
+    "tags": [
+      "CLI",
+      "Tool"
+    ],
+    "status": "released",
+    "description": "Utility to create visual ebooks from image folders.",
+    "image": null,
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/ebookmaker"
+      }
+    ]
+  },
+  {
+    "id": "peripagea6",
+    "title": "MacOS Printer",
+    "platform": "macOS",
+    "tags": [
+      "Tool"
+    ],
+    "status": "released",
+    "description": "An app to print images and text fra a Mac to a PeriPage A6 bluetooth printer",
+    "image": "peripage.webp",
+    "links": [
+      {
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/PeriPageA6-macos"
       }
     ]
   }
