@@ -72,7 +72,8 @@
     "title": "Hipstercade (C64)",
     "platform": "Commodore 64",
     "tags": [
-      "Game"
+      "Game",
+      "retro"
     ],
     "status": "released",
     "description": "The Commodore 64 edition of Hipstercade — a game about patience, hipster irony and the meaningless cycles of modern life. Sound and music by Mikkel Lodahl.",
@@ -123,7 +124,8 @@
     "title": "Tennis42 (Tennis for Two)",
     "platform": "NES",
     "tags": [
-      "Game"
+      "Game",
+      "retro"
     ],
     "status": "released",
     "description": "A remake of Tennis for Two — arguably the first video game ever made, originally built for an oscilloscope in 1958 — for the Nintendo Entertainment System. Two-player only. Written in 6502 assembly, compiled with nesasm; music by Cutcreator in FamiStudio. The ROM can also be burned to an EPROM for real NES hardware.",
@@ -140,7 +142,8 @@
     "title": "Escape from Cthulhu",
     "platform": "Fairchild Channel F",
     "tags": [
-      "Game"
+      "Game",
+      "retro"
     ],
     "status": "released",
     "description": "A tiny hero versus a floating cosmic horror, rendered in the Fairchild Channel F's four (very cheerful) colors.",
@@ -161,7 +164,8 @@
     "title": "Attack of the Empire",
     "platform": "MS-DOS",
     "tags": [
-      "Game"
+      "Game",
+      "retro"
     ],
     "status": "released",
     "description": "\"Pew pew\" for MS-DOS — a straightforward retro shooter.",
@@ -178,7 +182,8 @@
     "title": "Exploding Barrels",
     "platform": "ZX81",
     "tags": [
-      "Game"
+      "Game",
+      "retro"
     ],
     "status": "released",
     "description": "A tiny action game for the good old ZX81.",
@@ -212,7 +217,8 @@
     "title": "Arcade Pi",
     "platform": "Raspberry Pi",
     "tags": [
-      "Game"
+      "Game",
+      "retro"
     ],
     "status": "released",
     "description": "Five classic arcade games for Raspberry Pi, built on the Circle bare-metal framework.",
@@ -390,7 +396,8 @@
     "title": "CHREditor",
     "platform": "macOS",
     "tags": [
-      "Tool"
+      "Tool",
+      "retro"
     ],
     "status": "wip",
     "description": "An editor for Nintendo Entertainment System CHR-ROMs, built because no modern-Mac-friendly editor existed. Create and edit ROMs, import/export palettes, edit tiles, and import images directly into tile form. Finished — release is pending.",
@@ -407,7 +414,8 @@
     "title": "NESGfx",
     "platform": "macOS",
     "tags": [
-      "Tool"
+      "Tool",
+      "retro"
     ],
     "status": "wip",
     "description": "A companion tool to CHREditor for building NES page tables, attribute tables and palettes, developed while making Tennis42. Exports a complete set as binary files ready to include directly in 6502 source. Finished — release is pending.",
@@ -461,7 +469,8 @@
     "platform": "macOS",
     "tags": [
       "CLI",
-      "Tool"
+      "Tool",
+      "retro"
     ],
     "status": "released",
     "description": "Prepares bitmap images for Commodore 64 hardware — limits each character block to the C64's color rules, plus resizing, cropping, palette optimization and dithering. Output is ready for further conversion with tools like png2prg.",
@@ -515,7 +524,8 @@
     "platform": "macOS",
     "tags": [
       "CLI",
-      "Tool"
+      "Tool",
+      "retro"
     ],
     "status": "released",
     "description": "Converts video files to EVA — an old, quirky DOS-era animation format.",
@@ -548,34 +558,38 @@
   {
     "id": "chr2img",
     "title": "chr2img",
-    "platform": "App (details pending)",
+    "platform": "macOS",
     "tags": [
-      "Tool"
+      "Tool",
+      "retro",
+      "CLI"
     ],
-    "status": "wip",
-    "description": null,
+    "status": "released",
+    "description": "Creates a png screenshot from a NES character rom. Very simple",
     "image": "chr2img.webp",
     "links": [
       {
-        "label": "App Store link coming soon",
-        "url": null
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/chr2img"
       }
     ]
   },
   {
     "id": "img2nes",
     "title": "img2nes",
-    "platform": "App (details pending)",
+    "platform": "macOS",
     "tags": [
-      "Tool"
+      "Tool",
+      "retro",
+      "CLI"
     ],
-    "status": "wip",
+    "status": "released",
     "description": null,
     "image": "img2nes.webp",
     "links": [
       {
-        "label": "App Store link coming soon",
-        "url": null
+        "label": "GitHub",
+        "url": "https://github.com/general-ackbar/img2nes"
       }
     ]
   },
@@ -584,8 +598,9 @@
     "title": "rom2msx",
     "platform": "Cross-platform",
     "tags": [
-      "CLI",
-      "Tool"
+      "Tool",
+      "retro",
+      "CLI"
     ],
     "status": "released",
     "description": "Converts MSX ROM images from the command line.",
@@ -602,8 +617,9 @@
     "title": "Epson HX20 utilities",
     "platform": "Cross-platform",
     "tags": [
-      "CLI",
-      "Tool"
+      "Tool",
+      "retro",
+      "CLI"
     ],
     "status": "released",
     "description": "A small suite to convert Epson HX-20 BASIC programs to WAV files for loading via the cassette interface; tokenize BAS programs and create images.",
@@ -620,8 +636,9 @@
     "title": "bmp2yjk",
     "platform": "Cross-platform",
     "tags": [
-      "CLI",
-      "Tool"
+      "Tool",
+      "retro",
+      "CLI"
     ],
     "status": "released",
     "description": "A port of an old DOS/Windows tool for converting BMP images into the MSX YJK color format.",
@@ -638,8 +655,9 @@
     "title": "ZX81 External EPROM Builder",
     "platform": "Cross-platform",
     "tags": [
-      "CLI",
-      "Tool"
+      "Tool",
+      "retro",
+      "CLI"
     ],
     "status": "released",
     "description": "Builds custom, bootable ZX81 ROM images with built-in games or programs — for burning to an external EPROM.",
@@ -659,7 +677,7 @@
       "Tool",
       "CLI"
     ],
-    "status": "wip",
+    "status": "released",
     "description": "The engine behind the Mosaics project below — builds photo mosaics out of smaller source images. Source not published yet.",
     "image": "mosaic-creator.webp",
     "links": [
@@ -676,7 +694,7 @@
     "tags": [
       "Tool"
     ],
-    "status": "wip",
+    "status": "retired",
     "description": "A monitor for NeuroSky's MindWave EEG headset, built on since-outdated SDKs. Kept here for the novelty value as much as anything.",
     "image": null,
     "links": [
@@ -693,7 +711,7 @@
     "tags": [
       "Tool"
     ],
-    "status": "wip",
+    "status": "retired",
     "description": "A tool for the Eye Tribe eye tracker — a piece of hardware whose maker shut down around 2016–2017, so this is very much a museum piece by now.",
     "image": null,
     "links": [
@@ -760,8 +778,9 @@
     "title": "img2charset",
     "platform": "macOS",
     "tags": [
-      "CLI",
-      "Tool"
+      "Tool",
+      "retro",
+      "CLI"
     ],
     "status": "released",
     "description": "A small utility to convert a spritesheet or picture to a charset for NES",
