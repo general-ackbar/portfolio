@@ -66,6 +66,10 @@ def main():
     xlsx_path = sys.argv[1]
     out_path = sys.argv[2] if len(sys.argv) > 2 else "src/data/projects.json"
 
+    if not out_path.endswith(".json"):
+        sys.exit(f"Refusing to write to '{out_path}' — output path must end in .json "
+                  f"(this guards against overwriting projects.js by mistake).")
+
     wb = openpyxl.load_workbook(xlsx_path)
     ws = wb.active
 

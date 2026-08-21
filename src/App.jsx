@@ -54,10 +54,13 @@ export default function App() {
     <div className="page">
       <header className="site-header">
         <h1>Codeninja</h1>
-        <p className="site-tagline">Jonatan Yde — retro-computing tools, games, and other nerdy projects.</p>
+        <p className="site-tagline">Retro-computing tools, games, and other nerdy projects by Aladinsane (Jonatan).</p>
         <p className="site-intro">
-          A running collection of things I've built over the years — some polished, some very much
-          works in progress. Most of it lives on the App Store, itch.io or GitHub.
+          A running collection of things I've built over the years - some are polished, some are 
+          works in progress and some retired. Most of it lives on the App Store, itch.io or GitHub. 
+          <br />
+          <br />
+          Disclaimer: this page is built using Claude and some of the product images on the page are AI generated - I don't own that many different Macs.           
         </p>
         <nav className="profile-links">
           <a href="https://github.com/general-ackbar" target="_blank" rel="noreferrer noopener">

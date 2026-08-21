@@ -185,7 +185,7 @@ body {
 .card {
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border-radius: none /* var(--radius) */;
   overflow: hidden;
   display: flex;
   flex-direction: column;
