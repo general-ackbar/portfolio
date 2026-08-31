@@ -71,7 +71,7 @@
 
 <header>
   <h1>Retro Devtools</h1>
-  <p class="tagline">Support and privacy for CHREditor and NESgfx — graphics tools for the Nintendo Entertainment System.</p>
+  <p class="tagline">Support and privacy for CHREditor, NESgfx and ChannelF Graphics Editor — graphics tools for classic games consoles.</p>
 </header>
 
 <h2>Getting help</h2>
@@ -117,6 +117,10 @@ a fix and a long conversation:</p>
 <p>CHREditor opens <code>.chr</code> tile files, raw <code>.bin</code> data and <code>.nes</code>
 ROMs in the iNES and NES 2.0 formats. NESgfx works with its own project documents, and can
 import and export nametables, attribute tables, CHR tilesets and palettes as separate files.</p>
+<p>ChannelF Graphics Editor exports pictures as assembler source — <code>.inc</code> or
+<code>.asm</code> files containing <code>.byte</code> data, in hexadecimal or binary. It can
+re-open the files it wrote, import a PNG or JPEG to trace, and open the full-screen
+&ldquo;multicolor&rdquo; pictures produced by Kurt Woloch&rsquo;s ChannelF_Converter.</p>
 
 <h3>Can I edit a ROM directly?</h3>
 <p>Yes. CHREditor finds the graphics inside an iNES or NES 2.0 ROM, lets you edit them, and
@@ -128,26 +132,41 @@ appears in the Bank menu. Keep a copy of the original — editing writes to the 
 assigned in blocks of 32 by 32 pixels rather than per tile. NESgfx shows those block boundaries
 as an optional grid so you can see exactly where they fall.</p>
 
+<h3>In ChannelF Graphics Editor, why only four colours &mdash; and why do my colours turn white?</h3>
+<p>Again, the hardware. The Fairchild Channel F shows two bits per pixel: four colours per line,
+made of one background plus three plot colours (red, blue and green). The background is chosen
+per scanline and can be light grey, light green, light blue or black. When a line&rsquo;s
+background is black, its three plot colours are all displayed as white. The editor follows the
+same rules on screen, so what you see matches the console.</p>
+
+<h3>Why can&rsquo;t I edit a multicolor picture I opened?</h3>
+<p>A full-screen multicolor picture (Kurt Woloch's format, <a href="https://channelf.se/veswiki/index.php?title=Homebrew:Fullscreenpicture" target="_blank">Veswiki</a>) carries a different background colour on every scanline,
+which the editor&rsquo;s single palette can&rsquo;t represent for editing. Those files open
+read-only so you can view them accurately; start a new drawing to make something editable.</p>
+
 <h3>Which macOS versions are supported?</h3>
-<p>CHREditor needs macOS 11 or later. NESgfx needs macOS 12.6 or later.</p>
+<p>CHREditor needs macOS 11 or later. NESgfx needs macOS 12.6 or later. ChannelF Graphics Editor
+needs macOS 11 or later.</p>
 
 <h2>Privacy</h2>
 
-<p>Neither CHREditor nor NESgfx collects, stores or transmits any personal data.</p>
+<p>CHREditor, NESgfx and ChannelF Graphics Editor do not collect, store or transmit any
+personal data.</p>
 
 <ul>
   <li>There is no analytics, no tracking and no advertising.</li>
-  <li>Neither app creates an account or asks you to sign in.</li>
-  <li>Neither app sends anything over the network. The files you open and save stay on your
+  <li>None of the apps create an account or ask you to sign in.</li>
+  <li>None of the apps send anything over the network. The files you open and save stay on your
       own Mac, and nothing about them is reported anywhere.</li>
   <li>If you write to support, whatever you choose to send is used only to answer you, and is
       not passed on to anyone.</li>
 </ul>
 
 <footer>
-  <p>CHREditor and NESgfx are made by Jonatan Yde.<br>
-  Not affiliated with or endorsed by Nintendo. NES and Nintendo Entertainment System are
-  trademarks of Nintendo.</p>
+  <p>CHREditor, NESgfx and ChannelF Graphics Editor are made by Jonatan Yde.<br>
+  Not affiliated with or endorsed by Nintendo or Fairchild. NES and Nintendo Entertainment
+  System are trademarks of Nintendo. &ldquo;Channel&nbsp;F&rdquo; and &ldquo;Fairchild&rdquo;
+  are used only to describe the hardware these files target.</p>
 </footer>
 
 </div>
